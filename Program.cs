@@ -59,9 +59,9 @@ namespace FinalReqCC3L
             }
         }
 
-        public static float CalculateAverage(Students student)
+        public static float CalculateAverage(Students students)
         {
-            return (student.ComProg_Grade + student.Calculus_Grade + student.Trigo_Grade) / 3;
+            return (students.ComProg_Grade + students.Calculus_Grade + students.Trigo_Grade) / 3;
         }
 
         static void DisplayDetails(List<Students> students)
@@ -83,6 +83,8 @@ namespace FinalReqCC3L
 
             while (true)
             {
+                Console.WriteLine("Welcome to Hawksprey's grade computation!");
+                LineGeneration();
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("1. Input student data");
                 Console.WriteLine("2. View student data.");
@@ -108,7 +110,19 @@ namespace FinalReqCC3L
                         break;
 
                     case "3":
-                        Console.WriteLine("Exiting program...");
+                        Console.WriteLine("Are you sure? Type Y for Yes, type N for No.");
+                        string prog_choice = Console.ReadLine();
+
+                        if (prog_choice == "Y")
+                        {
+
+                            Console.WriteLine("Exiting program...");
+                        }
+
+                        else
+                        {
+                            continue;
+                        }
                         return;
 
                     default:
