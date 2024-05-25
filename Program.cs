@@ -83,7 +83,6 @@ namespace FinalReqCC3L
 
             while (true)
             {
-                Console.WriteLine("Welcome to Hawksprey's grade computation!");
                 LineGeneration();
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("1. Input student data");
